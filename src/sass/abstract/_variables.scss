@@ -25,3 +25,12 @@ $font-stack: (
     'Roboto Flex',
     'sans-serif',
 );
+
+// list breakpoints for responsive 
+$breakpoints: (
+    'x-small': '200px',
+    'small': '550px',
+    'medium': '850px',
+    'large': '1400px',
+    'huge': '2400px',
+);
