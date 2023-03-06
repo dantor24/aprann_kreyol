@@ -1,0 +1,27 @@
+// each of these colors are used to make a linear gradient for the login page
+$gradient-color-a: #0099f7;
+$gradient-color-b: #307fc9;
+$gradient-color-c: #60659b;
+$gradient-color-d: #914b6e;
+$gradient-color-e: #c13140;
+$gradient-color-f: #f51511e8;
+
+// colors for the elements in the login page
+
+$color-form-wrapper: rgba(128, 128, 128, 0.185);
+$color-form-shadow: rgba(14, 13, 13, 0.5);
+$color-bg-wrapper: #343148;
+$color-btn-submit: black;
+$color-bg-btn-submit: #F6D155;
+$color-placeholder: #ffc0cb;
+$color-switch-disabled: #ffffff78;
+$color-switch-enabled: #F6D155;
+$color-btn-hover: #ffb90f;
+
+// font-family for the website
+$font-stack: (
+    'Nunito',
+    'Work Sans',
+    'Roboto Flex',
+    'sans-serif',
+);
