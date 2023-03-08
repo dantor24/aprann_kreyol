@@ -1,0 +1,30 @@
+@import "../abstract/variables";
+
+#logo {
+    position: fixed;
+    height: 50px;
+    width: $panel-left-width;
+    padding-left: 10px;
+    z-index: 10;
+    
+
+    &__link {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: $color-txt-lightmode;
+        font: {
+            size: 18px;
+            weight: bold;
+        }
+
+        &__image {
+            width: 50px;
+        }
+
+    }
+
+    
+}

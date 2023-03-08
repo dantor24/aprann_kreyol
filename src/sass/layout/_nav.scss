@@ -1,0 +1,7 @@
+@import "../abstract/variables";
+
+nav{
+    display: flex;
+    padding-left: 10px;
+    background-color: $color-panel-left;
+}
