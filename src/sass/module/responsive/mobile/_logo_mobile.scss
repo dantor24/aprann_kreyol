@@ -1,0 +1,30 @@
+// responsive code for mobile
+#logo {
+
+    width: 100%;
+    clip-path: none;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    background-color: $color-panel;
+    z-index: 10;
+
+
+    &__link {
+
+        letter-spacing: 4px;
+        line-height: 18px;
+        span{
+            width: 50px;
+        }
+        font: {
+            size: 15px;
+            weight: bold;
+        }
+
+        &__image {
+            width: 40px;
+        }
+
+    }
+
+}

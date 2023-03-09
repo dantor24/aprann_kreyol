@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,108 @@
     <meta name="description"
         content="🇺🇸 basic on aprann kreyol. 🇫🇷 basique sur aprann Kreyol. 🇭🇹 debaz sou aprann kreyol">
     <link rel="stylesheet" href="../css/style.css">
-    
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <title>Tableau de bord</title>
 </head>
+
 <body>
     <div id="logo">
-        
+
         <a href="" id="logo__link">
             <img src="../images/logo-ak.png" alt="logo aprann kreyol" id="logo__link__image">
-            Aprann Kreyol
+            <span>Aprann Kreyol</span> 
         </a>
     </div>
     <nav class="menu">
         <ul class="menu__option">
-            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Basic.png" alt="icon menu basic">basic</a></li>
-            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Vovab.png" alt="icon menu vocabulaire">vocabulaire</a></li>
-            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Gramaire.png" alt="icon menu grammar">grammaire</a></li>
-            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Verbe.png" alt="icon menu verb">verbe</a></li>
-            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Proverbe.png" alt="icon menu proverb">proverbe</a></li>
+            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Basic.png"
+                        alt="icon menu basic">basic</a></li>
+            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Vovab.png"
+                        alt="icon menu vocabulaire">vocabulaire</a></li>
+            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Gramaire.png"
+                        alt="icon menu grammar">grammaire</a></li>
+            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Verbe.png"
+                        alt="icon menu verb">verbe</a></li>
+            <li class="menu__option__item"><a href=""><img src="../images/icon/Icon-Proverbe.png"
+                        alt="icon menu proverb">proverbe</a></li>
         </ul>
 
     </nav>
-    <section class="content">
+    <div class="panel-account">
+        <div class="panel-account__logout">
+            <span>deconnecter</span>
+            <span class="material-symbols-outlined">
+                logout
+            </span>
+        </div>
+        <div class="panel-account__profil">
+            <img src="../images/avatar/man(1).png" alt="avatar set a profil for the account">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </div>
+        <div class="panel-account__personal">
+            <span id="username">John Doe</span>
+            <span id="userstatus">apprenant</span>
+        </div>
+        <div class="panel-account__exp">
+            exp
+        <span id="panel-account-exp-value">13000</span>
+        </div>
         
+        <div class="panel-account__rank">
+            <h4>Top 5 apprenants</h4>
+            <div class="panel-account__rank__item">
+                <img src="../images/icon/Icon-Start.png" alt="icon rank">
+                <div class="panel-account__rank__item__user">
+                    <span class="panel-account__rank__item__user__name">joe frank</span>
+                    <span class="panel-account__rank__item__user__exp">90 000 Exp</span>
+                </div>
+                
+            </div>
+            <div class="panel-account__rank__item">
+                <img src="../images/icon/Icon-Start.png" alt="icon rank">
+                <div class="panel-account__rank__item__user">
+                    <span class="panel-account__rank__item__user__name">jacob desc</span>
+                    <span class="panel-account__rank__item__user__exp">87 000 Exp</span>
+                </div>
+                
+            </div>
+            <div class="panel-account__rank__item">
+                <img src="../images/icon/Icon-Start.png" alt="icon rank">
+                <div class="panel-account__rank__item__user">
+                    <span class="panel-account__rank__item__user__name">bernard felix</span>
+                    <span class="panel-account__rank__item__user__exp">87 000 Exp</span>
+                </div>
+                
+            </div>
+            
+            <div class="panel-account__rank__item">
+                <img src="../images/icon/Icon-Start.png" alt="icon rank">
+                <div class="panel-account__rank__item__user">
+                    <span class="panel-account__rank__item__user__name">backer ramanson</span>
+                    <span class="panel-account__rank__item__user__exp">86 700 Exp</span>
+                </div>
+                
+            </div>
+            <div class="panel-account__rank__item">
+                <img src="../images/icon/Icon-Start.png" alt="icon rank">
+                <div class="panel-account__rank__item__user">
+                    <span class="panel-account__rank__item__user__name">mancutie pierre</span>
+                    <span class="panel-account__rank__item__user__exp">86 000 Exp</span>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <section class="content">
+        <p></p>
     </section>
 
-    <script src="../js/particle.js"></script>
-    
+
 </body>
+
 </html>

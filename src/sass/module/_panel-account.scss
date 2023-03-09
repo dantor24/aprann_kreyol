@@ -1,0 +1,169 @@
+@import "../abstract/variables";
+
+.panel-account {
+    
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    right: 0px;
+    background-color: $color-panel;
+    height: 100vh;
+    width: $panel-width;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 15;
+    overflow: hidden;
+    // display: none;
+    
+
+    &__logout {
+        position: relative;
+        left: -3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        width: calc(15px + 100%);
+        padding-left: 10px;
+        text-transform: capitalize;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        cursor: pointer;
+
+        background-color: transparent;
+        transition: border-radius 2s, background-color 2s ease;
+        -moz-transition: border-radius 2s, background-color 2s ease;
+        -webkit-transition: border-radius 2s, background-color 2s ease;
+        -o-transition: border-radius 2s, background-color 2s ease;
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        &:hover {
+
+            padding-left: 10px;
+            background-color: white;
+            border-radius: 0px 50px 50px 0px;
+            overflow: hidden;
+        }
+    }
+
+    &__profil {
+        // border: 1px solid black;
+        width: 102px;
+        height: 100px;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid $primary-color;
+            border-radius: 50px;
+        }
+
+        // icon add for the profile
+        span {
+            position: relative;
+            bottom: 55px;
+            left: 85px;
+            // color: white;
+            background-color: $primary-color;
+            border-radius: 50px;
+            transition: background-color 2s ease;
+            -moz-transition: background-color 2s ease;
+            -webkit-transition: background-color 2s ease;
+            -o-transition: background-color 2s ease;
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        &:hover {
+            span {
+                background-color: white;
+            }
+            img{
+                transform: scale(1.1);
+                border: 2px solid white;
+            }
+        }
+    }
+
+    &__personal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        #userstatus {
+            position: relative;
+            top: -3px;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+
+    }
+
+    &__exp {
+        text-transform: capitalize;
+        background-color: $primary-color;
+        border-radius: 5px 0px;
+        overflow: hidden;
+        padding-left: 5px;
+        margin-bottom: 20px;
+
+        font: {
+            size: 1em;
+            weight: bold;
+        }
+    }
+
+    &__rank {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+
+        h4 {
+            text-align: center;
+
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: $menu-icon-size;
+            text-transform: capitalize;
+            gap: 10px;
+            background-color: rgba(128, 128, 128, 0.158);
+
+            font: {
+                size: 10px;
+                weight: bold;
+            }
+
+
+            img {
+                width: $menu-icon-size;
+            }
+
+            &__user {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+#panel-account-exp-value {
+    color: white;
+    background-color: $color-bg-logo;
+
+    padding: 0px 5px;
+
+    font: {
+        weight: normal;
+    }
+}

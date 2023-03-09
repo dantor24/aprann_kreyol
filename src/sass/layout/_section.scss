@@ -1,5 +1,9 @@
 @import "../abstract/variables";
 section{
-    // background-color: red;
-    // width: calc();
+    background-color:white;
+    // padding-left: $panel-width;
+    // padding-right: $panel-width;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
 }

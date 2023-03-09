@@ -1,2 +1,18 @@
+@import "../abstract/variables";
+
 @import "../module/logo";
 @import "../module/menu";
+@import "../module/panel-account";
+
+
+
+// responsive code for mobile
+@media screen and (min-width: map-get($breakpoints,'x-small')) and (max-width: map-get($breakpoints,'small')){
+
+    // instruction for mobile device
+    
+    @import "../module/responsive/mobile/logo_mobile";
+    @import "../module/responsive/mobile/menu_mobile";
+    @import "../module/responsive/mobile/panel-account-mobile";
+ 
+ }

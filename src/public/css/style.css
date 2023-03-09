@@ -75,6 +75,13 @@ nav {
   background-color: #d8dee9;
 }
 
+section {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+
 #logo {
   position: fixed;
   height: 50px;
@@ -336,6 +343,233 @@ nav {
   background-color: white;
   border-radius: 50px 0px 0px 50px;
   overflow: hidden;
+}
+
+.panel-account {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  right: 0px;
+  background-color: #d8dee9;
+  height: 100vh;
+  width: 210px;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 15;
+  overflow: hidden;
+}
+.panel-account__logout {
+  position: relative;
+  left: -3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  width: calc(15px + 100%);
+  padding-left: 10px;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: border-radius 2s, background-color 2s ease;
+  -moz-transition: border-radius 2s, background-color 2s ease;
+  -webkit-transition: border-radius 2s, background-color 2s ease;
+  -o-transition: border-radius 2s, background-color 2s ease;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.panel-account__logout:hover {
+  padding-left: 10px;
+  background-color: white;
+  border-radius: 0px 50px 50px 0px;
+  overflow: hidden;
+}
+.panel-account__profil {
+  width: 102px;
+  height: 100px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.panel-account__profil img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fbc30c;
+  border-radius: 50px;
+}
+.panel-account__profil span {
+  position: relative;
+  bottom: 55px;
+  left: 85px;
+  background-color: #fbc30c;
+  border-radius: 50px;
+  transition: background-color 2s ease;
+  -moz-transition: background-color 2s ease;
+  -webkit-transition: background-color 2s ease;
+  -o-transition: background-color 2s ease;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.panel-account__profil:hover span {
+  background-color: white;
+}
+.panel-account__profil:hover img {
+  transform: scale(1.1);
+  border: 2px solid white;
+}
+.panel-account__personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.panel-account__personal #userstatus {
+  position: relative;
+  top: -3px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.panel-account__exp {
+  text-transform: capitalize;
+  background-color: #fbc30c;
+  border-radius: 5px 0px;
+  overflow: hidden;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
+.panel-account__rank {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.panel-account__rank h4 {
+  text-align: center;
+}
+.panel-account__rank__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  text-transform: capitalize;
+  gap: 10px;
+  background-color: rgba(128, 128, 128, 0.158);
+  font-size: 10px;
+  font-weight: bold;
+}
+.panel-account__rank__item img {
+  width: 30px;
+}
+.panel-account__rank__item__user {
+  display: flex;
+  flex-direction: column;
+}
+
+#panel-account-exp-value {
+  color: white;
+  background-color: #808080;
+  padding: 0px 5px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 200px) and (max-width: 550px) {
+  #logo {
+    width: 100%;
+    clip-path: none;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    background-color: #d8dee9;
+    z-index: 10;
+  }
+  #logo__link {
+    letter-spacing: 4px;
+    line-height: 18px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #logo__link span {
+    width: 50px;
+  }
+  #logo__link__image {
+    width: 40px;
+  }
+  body {
+    overflow: hidden;
+  }
+  .menu {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+  }
+  .menu__option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+    height: 50px;
+    overflow: scroll;
+  }
+  .menu__option__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    font-size: 0.7em;
+    font-weight: bold;
+    font-padding-bottom: 4px;
+  }
+  .menu__option__item img {
+    width: 25px;
+  }
+  .menu__option a {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    background-color: blue;
+    gap: 0px;
+    background-color: transparent;
+    transition: border-radius 2s, background-color 2s ease;
+    -moz-transition: border-radius 2s, background-color 2s ease;
+    -webkit-transition: border-radius 2s, background-color 2s ease;
+    -o-transition: border-radius 2s, background-color 2s ease;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-transform: capitalize;
+  }
+  .panel-account {
+    -webkit-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+  }
+  .panel-account__logout {
+    margin-bottom: 20px;
+  }
+  .panel-account__profil {
+    width: 82px;
+    height: 80px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  .panel-account__profil img {
+    width: 80px;
+    height: 80px;
+  }
+  .panel-account__profil span {
+    position: relative;
+    bottom: 55px;
+    left: 65px;
+  }
+  .panel-account__personal, .panel-account__exp {
+    margin-bottom: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
