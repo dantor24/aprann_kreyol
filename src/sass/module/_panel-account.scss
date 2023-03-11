@@ -13,6 +13,7 @@
     padding-left: 10px;
     padding-right: 10px;
     z-index: 15;
+    @extend .disable-select;
     overflow: hidden;
     // display: none;
     
@@ -166,4 +167,8 @@
     font: {
         weight: normal;
     }
+}
+
+#arrow, #arrow-back{
+    display:none;
 }
