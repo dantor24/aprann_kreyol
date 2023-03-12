@@ -3,6 +3,7 @@
 @import "../module/logo";
 @import "../module/menu";
 @import "../module/panel-account";
+@import "../module/notion";
 
 
 
@@ -14,5 +15,13 @@
     @import "../module/responsive/mobile/logo_mobile";
     @import "../module/responsive/mobile/menu_mobile";
     @import "../module/responsive/mobile/panel-account-mobile";
+    @import "../module/responsive/mobile/notion_mobile";
  
  }
+ // responsive code for tablet
+@media screen and (min-width: map-get($breakpoints,'small')) and (max-width: map-get($breakpoints,'medium')){
+    // instruction for tablet device
+    @import "../module/responsive/tablet/notion_tablet";
+    @import "../module/responsive/mobile/panel-account-mobile";
+
+}
