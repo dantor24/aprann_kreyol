@@ -1,4 +1,5 @@
 @import "../abstract/variables";
+@import "../abstract/inherit";
 section{
     padding-top: 5px;
     padding-left: $panel-width + 5px;
@@ -52,6 +53,9 @@ section{
         padding: 5px;
         margin-bottom: 10px;
         border-radius: 5px;
+        &:hover{
+            @extend .shake-vertical;
+        }
         &__title{
             font-size: 0.9em;
         }
