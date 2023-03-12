@@ -1,0 +1,13 @@
+ @import "../../abstract/variables";
+ 
+ // responsive code for mobile
+ @media screen and (min-width: map-get($breakpoints,'x-small')) and (max-width: map-get($breakpoints,'small')){
+
+    // instruction for mobile device
+
+}
+// responsive code for tablet
+@media screen and (min-width: map-get($breakpoints,'small')) and (max-width: map-get($breakpoints,'medium')){
+    // instruction for tablet device
+
+}

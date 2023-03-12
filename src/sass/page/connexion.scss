@@ -1,0 +1,33 @@
+@import "../abstract/variables";
+@import "../module/connexion_form";
+
+
+body{
+    border: 1px solid black;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(left, $gradient-color-a 0%, $gradient-color-b 20%, $gradient-color-c 40%, $gradient-color-d 60%, $gradient-color-e 80%, $gradient-color-f 100%);
+    background: -o-linear-gradient(left, $gradient-color-a 0%, $gradient-color-b 20%, $gradient-color-c 40%, $gradient-color-d 60%, $gradient-color-e 80%, $gradient-color-f 100%);
+    background: -ms-linear-gradient(left, $gradient-color-a 0%, $gradient-color-b 20%, $gradient-color-c 40%, $gradient-color-d 60%, $gradient-color-e 80%, $gradient-color-f 100%);
+    background: -moz-linear-gradient(left, $gradient-color-a 0%, $gradient-color-b 20%, $gradient-color-c 40%, $gradient-color-d 60%, $gradient-color-e 80%, $gradient-color-f 100%);
+    background: linear-gradient(to right, $gradient-color-a 0%, $gradient-color-b 20%, $gradient-color-c 40%, $gradient-color-d 60%, $gradient-color-e 80%, $gradient-color-f 100%);
+
+}
+
+ // responsive code for mobile
+ @media screen and (min-width: map-get($breakpoints,'x-small')) and (max-width: map-get($breakpoints,'small')){
+
+    @import "../module/responsive/mobile/connexion_form_mobile";
+
+}
+// responsive code for tablet
+@media screen and (min-width: map-get($breakpoints,'small')) and (max-width: map-get($breakpoints,'medium')){
+
+    @import "../module/responsive/tablet/connexion_form_tablet";
+
+}

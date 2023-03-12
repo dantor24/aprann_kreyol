@@ -1,0 +1,52 @@
+@import "../abstract/inherit";
+.menu{
+    position: fixed;
+    left: 0px;
+    width: $panel-width;
+    height: 100vh;
+    padding-top: 150px;
+    z-index: 5;
+    &__option{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        &__item{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            img{
+                width: $menu-icon-size;
+            }
+            font: {
+                size: 1.1em;
+                weight: bold;
+            }
+            
+        }
+        a{
+
+            color: $color-txt-lightmode;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            background-color: transparent;
+            transition: border-radius 2s,background-color 2s ease;
+            -moz-transition: border-radius 2s,background-color 2s ease;
+            -webkit-transition: border-radius 2s,background-color 2s ease;
+            -o-transition: border-radius 2s,background-color 2s ease;
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+            
+            text: {
+                transform: capitalize;
+            }
+            &:hover{
+                background-color: white;
+                border-radius:50px 0px 0px 50px;
+                overflow: hidden;
+            }
+            
+        }
+    }
+}

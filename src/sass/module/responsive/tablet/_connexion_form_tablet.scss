@@ -1,0 +1,11 @@
+.form{
+    grid-template-columns: 35% 65% ;
+    
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+      
+}
