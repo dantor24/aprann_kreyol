@@ -1,0 +1,52 @@
+// each of these colors are used to make a linear gradient for the login page
+$gradient-color-a: #0099f7;
+$gradient-color-b: #307fc9;
+$gradient-color-c: #60659b;
+$gradient-color-d: #914b6e;
+$gradient-color-e: #c13140;
+$gradient-color-f: #f51511e8;
+
+// colors for the elements in the login page
+
+$color-form-wrapper: rgba(128, 128, 128, 0.185);
+$color-form-shadow: rgba(14, 13, 13, 0.5);
+$color-bg-wrapper: #343148;
+$color-btn-submit: black;
+$color-bg-btn-submit: #F6D155;
+$color-placeholder: #ffc0cb;
+$color-switch-disabled: #ffffff78;
+$color-switch-enabled: #F6D155;
+$color-btn-hover: #ffb90f;
+
+//  color for the elements in all the pages of the website
+
+$color-panel: #d8dee9;
+$color-item-basic: #223A5E;
+$color-bg-logo:#a7a7a7;
+$primary-color: #fbc30c;
+$color-scrollbar-track: #f1f1f1;
+$color-scrollbar-thumb: #5a5959;
+$color-txt-lightmode: black;
+$color-txt-lightmode-hover: white;
+
+$panel-width: 210px;
+$btn-width: 70px;
+$btn-height: 70px;
+$menu-icon-size: 30px;
+
+// font-family for the website
+$font-stack: (
+    'Nunito',
+    'Work Sans',
+    'Roboto Flex',
+    'sans-serif',
+);
+
+// list breakpoints for responsive 
+$breakpoints: (
+    'x-small': '200px',
+    'small': '550px',
+    'medium': '850px',
+    'large': '1400px',
+    'huge': '2400px',
+);

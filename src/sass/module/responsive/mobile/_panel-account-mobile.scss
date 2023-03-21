@@ -1,0 +1,51 @@
+@import "../../../abstract/mixin";
+.panel-account {
+  // display: none;
+  right: -$panel-width;
+  -webkit-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+
+  &__logout{
+    margin-bottom: 20px;
+  }
+  
+
+  &__profil {
+
+    width: 82px;
+    height: 80px;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    // icon add for the profile
+    span {
+        position: relative;
+        bottom: 55px;
+        left: 65px;
+    }
+
+}
+    &__personal, &__exp{
+        margin-bottom: 15px;
+    }
+
+}
+
+#arrow{
+    display: block;
+    position: fixed; 
+    top: 190px;
+    right: 2px;
+    background-color: $primary-color;
+    border-radius: 50px;
+    
+
+    z-index: 15;
+    
+}

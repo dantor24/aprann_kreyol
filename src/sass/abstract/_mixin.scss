@@ -1,0 +1,13 @@
+@mixin btn($bg){
+    
+  width: 70px;
+  height: 40px;
+  padding: 5px;
+  background-color: $bg;
+  text-transform: capitalize;
+  border-style: none;
+  border-radius: 5px;
+
+  
+    
+}

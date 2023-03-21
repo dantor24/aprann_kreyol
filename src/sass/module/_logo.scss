@@ -1,0 +1,41 @@
+@import "../abstract/variables";
+
+#logo {
+    position: fixed;
+    height: 50px;
+    width: $panel-width;
+    padding-left: 10px;
+    padding-bottom: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+    background-color: $color-bg-logo;     
+    
+
+    z-index: 10;
+    
+
+    &__link {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        color: $color-txt-lightmode;
+        letter-spacing: 5px;
+        line-height: 20px;
+        font: {
+            size: 18px;
+            weight: bold;
+        }
+
+        &__image {
+            width: 50px;
+            @extend .shake-vertical;
+        }
+        &:hover{
+            
+        }
+
+    }
+
+    
+}

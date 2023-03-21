@@ -1,0 +1,71 @@
+@import '../abstract/variables';
+
+*,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul > li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    // color: $primary-color;
+}
+img,a {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    // user-drag: none;
+  }
+h1,h2,h3,h4,h5,h6,a,p{
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select:none;
+}
+// the code bellow customize the scrollbar for the website
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $color-scrollbar-track;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5959;
+}
+
+// placeholder edited
+$color-placeholder: white;
+
+::placeholder {
+    color: $color-placeholder;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color-placeholder;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color-placeholder;
+}
