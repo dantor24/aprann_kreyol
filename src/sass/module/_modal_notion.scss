@@ -1,0 +1,48 @@
+@import "../abstract/variables";
+@import "../abstract/mixin";
+@import "../abstract/inherit";
+.modal-notion{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    border: 2px solid black;
+    background-color: rgba(128, 128, 128, 0.123);
+    backdrop-filter: blur(5px);
+    &__wrapper{
+        @extend .modal;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 85%;
+        height: 80%;
+        padding: 10px;
+        background-color: $color-panel;
+        border-radius: 5px;
+        overflow: hidden;
+        -webkit-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+        box-shadow: -5px 0px 26px -4px rgba(0, 0, 0, 0.75);
+        
+        &__title{
+            text-transform: capitalize;
+        }
+        &__audio{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__img{
+                width: 150px;
+            }
+        }
+    }
+
+}
