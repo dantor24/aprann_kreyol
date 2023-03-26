@@ -37,7 +37,8 @@
         &__title {
             text-transform: capitalize;
             position: absolute;
-            top: 10px;
+            top: 15px;
+            // margin-bottom: 10px;
 
             font: {
                 size: 1.3em;
@@ -74,8 +75,50 @@
                 width: 150px;
             }
         }
+        &__card{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            margin-bottom: 10px;
+            .card{
+                
+                img{
+                    width: 70px;
+                    margin: 5px;
+                    cursor: pointer;
+                    transition: width 0.2s ease-in-out,filter 0.5s ease-in-out;
+                    &:hover{
+                        width: 80px;
+                        filter: grayscale(90);
+                    }
+                }
+            }
+            input{
+                display: none;
+            }
+        }
     }
-
+    &__wrapper-order{
+        font-size: 1em;
+        max-width: 70%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 25px;
+        font-weight: lighter;
+    }
+    &__wrapper-input{
+        width: 170px;
+        border: 1px solid rgb(180, 178, 178);
+        border-radius: 3px;
+        text-align: center;
+        padding: 2px;
+        &:focus{
+            border: 1px solid $primary-color;
+            border-radius: 3px;
+            outline: none;
+            
+        }
+    }
     &__progress{
         position: absolute;
         left: 0px;
@@ -88,4 +131,27 @@
 
 }
 
-  
+.checktest{
+    display: none;
+}
+
+#state{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 90px);
+    width: 170px;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    border-radius: 5px;
+    color: $primary-color;
+    color: $primary-color;
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 1px 10px 2px rgb(80, 78, 78);
+    opacity: 1;
+    @extend .up;
+    z-index: 100;
+
+
+}

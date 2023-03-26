@@ -30,8 +30,7 @@ class Hearing {
   }
 
   playSound() {
-
-    this.hearing.forEach((btn,voice) => {
+    this.hearing.forEach((btn, voice) => {
       btn.addEventListener("click", (event) => {
         this.sound[voice].currentTime = 0;
         this.sound[voice].play();
@@ -42,12 +41,15 @@ class Hearing {
 
 class Next {
   static item = 0;
+  static indextest = 0;
   constructor(btn, content) {
     this.btn = document.querySelector(btn);
     this.content = document.querySelectorAll(content);
   }
 
   showContent() {
+    let checktest = document.querySelectorAll(".checktest");
+    let valid = 0;
     let previouse = 0;
     if (Next.item === 0) {
       this.content[Next.item].style.display = "flex";
@@ -55,27 +57,91 @@ class Next {
       Next.item++;
     }
     this.btn.addEventListener("click", (event) => {
-      if (Next.item !== 0 && Next.item < Object.keys(this.content).length) {
-        this.content[previouse].style.display = "none";
-        this.content[Next.item].style.display = "flex";
-        previouse = Next.item;
-        Next.item++;
+      if (
+        checktest[valid].checked &&
+        valid < Object.keys(this.content).length
+      ) {
+        if (Next.item !== 0 && Next.item < Object.keys(this.content).length) {
+          this.content[previouse].style.display = "none";
+          this.content[Next.item].style.display = "flex";
+          previouse = Next.item;
+          Next.item++;
+          // this.progress('.modal-notion__progress');
+        }
+        valid++;
       }
     });
   }
 
-  progress(progressBar) {
+  // this function compare the input to the corresponding answer 
+  checkResponse(input, answer) {
+    let inputs = document.querySelectorAll(input);
+    let answers = document.querySelectorAll(answer);
+    let message = document.querySelector("#state");
+    let i = 0;
+  
+    this.btn.addEventListener("click", () => {
+      let exp = 0;
+      let showexp = document.querySelector("#panel-account-exp-value");
+      let current_value = parseInt(showexp.innerHTML);
+  
+      if (Next.indextest < answers.length) {
+        if (answers[Next.indextest].getAttribute("data-custom") != null) {
+          if (
+            inputs[i] && // check if input[i] is defined
+            answers[Next.indextest].getAttribute("data-custom") == inputs[i].value
+          ) {
+            exp = answers[Next.indextest].getAttribute("data-exp");
+            current_value += parseInt(exp);
+            showexp.innerHTML = current_value;
+            answers[Next.indextest].checked = true;
+            message.style.display = "block";
+            document.querySelector("#state span").innerHTML = exp + " Xp";
+            setTimeout(() => {
+              message.style.display = "none";
+            }, 2000);
+            Next.indextest++;
+            i++;
+          } else {
+            answers[Next.indextest].checked = false;
+            message.style.display = "block";
+            document.querySelector("#state span").innerHTML = "mauvaise reponse!";
+            setTimeout(() => {
+              message.style.display = "none";
+            }, 2000);
+          }
+        } else {
+          answers[Next.indextest].checked = true;
+          Next.indextest++;
+        }
+      }
+    });
+  }
+  
+
+  progress(progressBar,test) {
     progressBar = document.querySelector(progressBar);
-    
-    let currentIndex = 0
-    this.btn.addEventListener('click', () => {
-        if (currentIndex < this.content.length - 1) {
-          currentIndex++;
+    test = document.querySelectorAll(test);
+
+    let currentIndex = 0;
+    let index_test = 0;
+    this.btn.addEventListener("click", () => {
+      
+      if(index_test < test.length && test[index_test].checked){
+      if (currentIndex < this.content.length - 1) {
+        currentIndex++;
+        
         //   console.log(progressBar)
         // progressBar.style.display = "none";
-          progressBar.style.width = `${((currentIndex + 1) / this.content.length) * 100}%`;
-        }
-      });
+        progressBar.style.width = `${
+          ((currentIndex + 1) / this.content.length) * 100
+        }%`;
+        
+      }
+      index_test++;
+    }
+    });
+  
   }
 }
 const notion = new Notion(".wrapper__notion", ".modal-notion");
@@ -89,5 +155,7 @@ const hearing = new Hearing(
 hearing.playSound();
 
 const next = new Next(".btn-change", ".modal-notion__wrapper__audio");
+
+next.checkResponse(".modal-notion__wrapper-input", ".checktest");
 next.showContent();
-next.progress('.modal-notion__progress');
+next.progress(".modal-notion__progress",".checktest");

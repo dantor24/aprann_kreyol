@@ -2,7 +2,26 @@
         user-select: none; /* Disable selection of text */
         -webkit-user-drag: none; /* Disable dragging of elements in Safari */
         -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
-}     
+}
+.up{
+        // -webkit-animation: mistake 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: mistake 0.1s ease-in-out both;
+}    
+
+@-webkit-keyframes mistake{
+        from{
+                bottom:-10px;
+        }to{
+                bottom: 30px;
+        }
+}
+@keyframes mistake {
+        from{
+                bottom:-10px;
+        }to{
+                bottom: 30px;
+        }
+}
 
 .heartbeat {
         -webkit-animation: heartbeat 1.5s ease-in-out infinite both;

@@ -6,6 +6,26 @@
   -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
 }
 
+.up, #state {
+  animation: mistake 0.1s ease-in-out both;
+}
+
+@-webkit-keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -310,7 +330,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 * {
-  font-family: "Nunito", "Work Sans", "Roboto Flex", "sans-serif";
+  font-family: "Work Sans", "Roboto Flex", "sans-serif";
 }
 
 nav {
@@ -359,6 +379,26 @@ section {
   -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
 }
 
+.up, #state {
+  animation: mistake 0.1s ease-in-out both;
+}
+
+@-webkit-keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -785,6 +825,26 @@ section {
   -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
 }
 
+.up, #state {
+  animation: mistake 0.1s ease-in-out both;
+}
+
+@-webkit-keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -1102,6 +1162,26 @@ section {
   -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
 }
 
+.up, #state {
+  animation: mistake 0.1s ease-in-out both;
+}
+
+@-webkit-keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -1415,6 +1495,26 @@ section {
   -webkit-touch-callout: none; /* Disable the long-press context menu on iOS */
 }
 
+.up, #state {
+  animation: mistake 0.1s ease-in-out both;
+}
+
+@-webkit-keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes mistake {
+  from {
+    bottom: -10px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 .heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
@@ -1686,7 +1786,7 @@ section {
 .modal-notion__wrapper__title {
   text-transform: capitalize;
   position: absolute;
-  top: 10px;
+  top: 15px;
   font-size: 1.3em;
   font-weight: bold;
 }
@@ -1716,6 +1816,45 @@ section {
 .modal-notion__wrapper__audio__img {
   width: 150px;
 }
+.modal-notion__wrapper__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 10px;
+}
+.modal-notion__wrapper__card .card img {
+  width: 70px;
+  margin: 5px;
+  cursor: pointer;
+  transition: width 0.2s ease-in-out, filter 0.5s ease-in-out;
+}
+.modal-notion__wrapper__card .card img:hover {
+  width: 80px;
+  filter: grayscale(90);
+}
+.modal-notion__wrapper__card input {
+  display: none;
+}
+.modal-notion__wrapper-order {
+  font-size: 1em;
+  max-width: 70%;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  font-weight: lighter;
+}
+.modal-notion__wrapper-input {
+  width: 170px;
+  border: 1px solid rgb(180, 178, 178);
+  border-radius: 3px;
+  text-align: center;
+  padding: 2px;
+}
+.modal-notion__wrapper-input:focus {
+  border: 1px solid #fbc30c;
+  border-radius: 3px;
+  outline: none;
+}
 .modal-notion__progress {
   position: absolute;
   left: 0px;
@@ -1724,6 +1863,28 @@ section {
   height: 4px;
   background-color: #fbc30c;
   transition: width 0.3s ease-in-out;
+}
+
+.checktest {
+  display: none;
+}
+
+#state {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 90px);
+  width: 170px;
+  padding: 5px;
+  background-color: black;
+  text-align: center;
+  border-radius: 5px;
+  color: #fbc30c;
+  color: #fbc30c;
+  backdrop-filter: blur(4px);
+  box-shadow: 1px 1px 10px 2px rgb(80, 78, 78);
+  opacity: 1;
+  z-index: 100;
 }
 
 @media screen and (min-width: 200px) and (max-width: 550px) {
