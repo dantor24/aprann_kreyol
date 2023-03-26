@@ -22,10 +22,11 @@ section{
         height: 30px;
         line-height: 30px;
         text-transform: capitalize;
+        
     }
 
     p{
-        margin-bottom: 5px;
+        top: -5px;
         z-index: 6;
     }
 
@@ -33,6 +34,7 @@ section{
         font: 100;
         position: absolute;
         right: 20px;
+        width: 100px;
         transform: scale(1.6);
         z-index: 5;
         opacity: 0.1;

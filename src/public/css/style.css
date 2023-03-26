@@ -1093,8 +1093,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: 75% 25%;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-gap: 0px;
   justify-content: center;
   align-items: center;
   padding-left: 10px;
@@ -1112,10 +1111,14 @@ section {
 #wrapper-info p {
   grid-area: 2/1/3/2;
   margin-bottom: 5px;
+  position: relative;
+  top: -20px;
 }
 #wrapper-info img {
   grid-area: 1/2/3/3;
-  margin: auto;
+  justify-self: end;
+  width: 80%;
+  height: auto;
 }
 
 .wrapper {
@@ -2022,13 +2025,14 @@ section {
     text-transform: capitalize;
   }
   #wrapper-info p {
-    margin-bottom: 5px;
+    top: -5px;
     z-index: 6;
   }
   #wrapper-info img {
     font: 100;
     position: absolute;
     right: 20px;
+    width: 100px;
     transform: scale(1.6);
     z-index: 5;
     opacity: 0.1;
@@ -2050,7 +2054,7 @@ section {
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 0px;
     width: 100%;
     height: 150px;
     background-color: #fbc30c;
@@ -2067,6 +2071,7 @@ section {
   }
   #wrapper-info img {
     grid-area: 1/2/3/3;
+    width: 140px;
   }
   .wrapper {
     display: flex;

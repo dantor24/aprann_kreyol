@@ -43,9 +43,15 @@ class Menu {
             }
         });
     }
+    // reset the position of the menu 
+    onLoad() {
+        this.btn.checked = false;
+        this.icon.innerHTML = 'arrow_back';
 
+    }
 
 }
 
 const menu = new Menu('#arrow-back','#arrow','.panel-account');
 menu.eventIcon();
+menu.onLoad();
